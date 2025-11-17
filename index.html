@@ -86,7 +86,7 @@
             border-left: 5px solid var(--accent-color);
         }
         
-        .table-container {
+        .table-wrapper {
             overflow-x: auto;
             position: relative;
         }
@@ -101,15 +101,15 @@
         
         thead {
             position: sticky;
-            top: 130px; /* header height + section title height */
+            top: 130px;
             z-index: 90;
         }
         
         th, td {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
-            min-width: 80px;
+            min-width: 100px;
         }
         
         th {
@@ -118,7 +118,6 @@
             position: sticky;
             top: 130px;
             z-index: 80;
-            box-shadow: 0 1px 0 #ddd;
         }
         
         tr:nth-child(even) {
@@ -140,6 +139,8 @@
             object-fit: contain;
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: block;
+            margin: 0 auto;
         }
         
         .section-indicator {
@@ -193,7 +194,7 @@
             opacity: 1;
         }
 
-        /* Estilos para hacer la tabla responsive */
+        /* Estilos responsivos */
         @media (max-width: 1200px) {
             img {
                 width: 4cm;
@@ -208,7 +209,7 @@
             }
             
             th, td {
-                padding: 8px 5px;
+                padding: 10px 8px;
                 font-size: 0.9rem;
             }
         }
@@ -240,18 +241,15 @@
                 margin-bottom: 5px;
             }
             
-            table {
-                font-size: 0.85rem;
-            }
-            
             img {
                 width: 2.5cm;
                 height: 2.5cm;
             }
             
             th, td {
-                padding: 6px 3px;
+                padding: 8px 5px;
                 font-size: 0.8rem;
+                min-width: 80px;
             }
         }
 
@@ -261,8 +259,10 @@
                 height: 2cm;
             }
             
-            .table-container {
+            th, td {
+                padding: 6px 3px;
                 font-size: 0.75rem;
+                min-width: 60px;
             }
         }
     </style>
@@ -290,7 +290,7 @@
     <!-- Sección Los Laureles -->
     <section id="laureles" class="section">
         <h2 class="section-title">Los Laureles</h2>
-        <div class="table-container">
+        <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
@@ -307,7 +307,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=14" alt="14"></td>
+                        <td><img src="imagenes/14.jpg" alt="14" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=14'"></td>
                         <td>15523</td>
                         <td>15541</td>
                         <td>18</td>
@@ -318,7 +318,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=05" alt="05"></td>
+                        <td><img src="imagenes/05.jpg" alt="05" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=05'"></td>
                         <td>14943</td>
                         <td>15004</td>
                         <td>61</td>
@@ -329,7 +329,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=13" alt="13"></td>
+                        <td><img src="imagenes/13.jpg" alt="13" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=13'"></td>
                         <td>17758</td>
                         <td>17860</td>
                         <td>102</td>
@@ -340,7 +340,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=03" alt="03"></td>
+                        <td><img src="imagenes/03.jpg" alt="03" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=03'"></td>
                         <td>30372</td>
                         <td>30429</td>
                         <td>57</td>
@@ -351,7 +351,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=02" alt="02"></td>
+                        <td><img src="imagenes/02.jpg" alt="02" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=02'"></td>
                         <td>4563</td>
                         <td>4626</td>
                         <td>63</td>
@@ -362,7 +362,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=06" alt="06"></td>
+                        <td><img src="imagenes/06.jpg" alt="06" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=06'"></td>
                         <td>931</td>
                         <td>959</td>
                         <td>28</td>
@@ -373,7 +373,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=08" alt="08"></td>
+                        <td><img src="imagenes/08.jpg" alt="08" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=08'"></td>
                         <td>46192</td>
                         <td>46237</td>
                         <td>45</td>
@@ -384,7 +384,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=09" alt="09"></td>
+                        <td><img src="imagenes/09.jpg" alt="09" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=09'"></td>
                         <td>151568</td>
                         <td>151626</td>
                         <td>58</td>
@@ -395,7 +395,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=10" alt="10"></td>
+                        <td><img src="imagenes/10.jpg" alt="10" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=10'"></td>
                         <td>80984</td>
                         <td>81004</td>
                         <td>20</td>
@@ -406,7 +406,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=11" alt="11"></td>
+                        <td><img src="imagenes/11.jpg" alt="11" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=11'"></td>
                         <td>117387</td>
                         <td>117414</td>
                         <td>27</td>
@@ -417,7 +417,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=12" alt="12"></td>
+                        <td><img src="imagenes/12.jpg" alt="12" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=12'"></td>
                         <td>31897</td>
                         <td>31961</td>
                         <td>64</td>
@@ -428,7 +428,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=04" alt="04"></td>
+                        <td><img src="imagenes/04.jpg" alt="04" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=04'"></td>
                         <td></td>
                         <td></td>
                         <td>0</td>
@@ -439,7 +439,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=07" alt="07"></td>
+                        <td><img src="imagenes/07.jpg" alt="07" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=07'"></td>
                         <td></td>
                         <td></td>
                         <td>0</td>
@@ -450,7 +450,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/3498db/ffffff?text=01" alt="01"></td>
+                        <td><img src="imagenes/01.jpg" alt="01" onerror="this.src='https://via.placeholder.com/150/3498db/ffffff?text=01'"></td>
                         <td>42569</td>
                         <td>42604</td>
                         <td>35</td>
@@ -487,11 +487,10 @@
         </div>
     </section>
     
-    <!-- Las otras secciones (Villa Morra, Lambaré, Villa Elisa) mantienen la misma estructura -->
     <!-- Sección Villa Morra -->
     <section id="morra" class="section">
         <h2 class="section-title">Villa Morra</h2>
-        <div class="table-container">
+        <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
@@ -508,7 +507,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/e74c3c/ffffff?text=38" alt="38"></td>
+                        <td><img src="imagenes/38.jpg" alt="38" onerror="this.src='https://via.placeholder.com/150/e74c3c/ffffff?text=38'"></td>
                         <td>28209</td>
                         <td>28283</td>
                         <td>74</td>
@@ -519,7 +518,7 @@
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/e74c3c/ffffff?text=39" alt="39"></td>
+                        <td><img src="imagenes/39.jpg" alt="39" onerror="this.src='https://via.placeholder.com/150/e74c3c/ffffff?text=39'"></td>
                         <td>836</td>
                         <td>913</td>
                         <td>77</td>
@@ -529,7 +528,94 @@
                         <td>7</td>
                         <td>-</td>
                     </tr>
-                    <!-- ... resto de filas de Villa Morra ... -->
+                    <tr>
+                        <td><img src="imagenes/40.jpg" alt="40" onerror="this.src='https://via.placeholder.com/150/e74c3c/ffffff?text=40'"></td>
+                        <td>28600</td>
+                        <td>28661</td>
+                        <td>61</td>
+                        <td>61</td>
+                        <td>2087</td>
+                        <td>2092</td>
+                        <td>5</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/41.jpg" alt="41" onerror="this.src='https://via.placeholder.com/150/e74c3c/ffffff?text=41'"></td>
+                        <td>27464</td>
+                        <td>27481</td>
+                        <td>17</td>
+                        <td>17</td>
+                        <td>2171</td>
+                        <td>2176</td>
+                        <td>5</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/42.jpg" alt="42" onerror="this.src='https://via.placeholder.com/150/e74c3c/ffffff?text=42'"></td>
+                        <td>571</td>
+                        <td>624</td>
+                        <td>53</td>
+                        <td>51</td>
+                        <td>40</td>
+                        <td>44</td>
+                        <td>4</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/43.jpg" alt="43" onerror="this.src='https://via.placeholder.com/150/e74c3c/ffffff?text=43'"></td>
+                        <td>19079</td>
+                        <td>19147</td>
+                        <td>68</td>
+                        <td></td>
+                        <td>1674</td>
+                        <td>1678</td>
+                        <td>4</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/44.jpg" alt="44" onerror="this.src='https://via.placeholder.com/150/e74c3c/ffffff?text=44'"></td>
+                        <td>20616</td>
+                        <td>20652</td>
+                        <td>36</td>
+                        <td>102</td>
+                        <td>1428</td>
+                        <td>1431</td>
+                        <td>3</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/36.jpg" alt="36" onerror="this.src='https://via.placeholder.com/150/e74c3c/ffffff?text=36'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>29</td>
+                        <td>13360</td>
+                        <td>13471</td>
+                        <td>111</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/37.jpg" alt="37" onerror="this.src='https://via.placeholder.com/150/e74c3c/ffffff?text=37'"></td>
+                        <td>104336</td>
+                        <td>104372</td>
+                        <td>36</td>
+                        <td>36</td>
+                        <td>663794</td>
+                        <td>663953</td>
+                        <td>159</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/35.jpg" alt="35" onerror="this.src='https://via.placeholder.com/150/e74c3c/ffffff?text=35'"></td>
+                        <td>40148</td>
+                        <td>40212</td>
+                        <td>64</td>
+                        <td>64</td>
+                        <td>23402</td>
+                        <td>23769</td>
+                        <td>367</td>
+                        <td>-</td>
+                    </tr>
                     <tr class="total-row">
                         <td>Totales</td>
                         <td></td>
@@ -560,7 +646,7 @@
     <!-- Sección Lambaré -->
     <section id="lambare" class="section">
         <h2 class="section-title">Lambaré</h2>
-        <div class="table-container">
+        <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
@@ -577,7 +663,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/2ecc71/ffffff?text=49" alt="49"></td>
+                        <td><img src="imagenes/49.jpg" alt="49" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=49'"></td>
                         <td>221</td>
                         <td>250</td>
                         <td>29</td>
@@ -587,7 +673,149 @@
                         <td>6</td>
                         <td>-</td>
                     </tr>
-                    <!-- ... resto de filas de Lambaré ... -->
+                    <tr>
+                        <td><img src="imagenes/50.jpg" alt="50" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=50'"></td>
+                        <td>35</td>
+                        <td>45</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>2</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/53.jpg" alt="53" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=53'"></td>
+                        <td>171</td>
+                        <td>176</td>
+                        <td>5</td>
+                        <td></td>
+                        <td>28</td>
+                        <td>28</td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/51.jpg" alt="51" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=51'"></td>
+                        <td>1576</td>
+                        <td>1605</td>
+                        <td>29</td>
+                        <td>28</td>
+                        <td>112</td>
+                        <td>114</td>
+                        <td>2</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/45.jpg" alt="45" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=45'"></td>
+                        <td>6932</td>
+                        <td>6963</td>
+                        <td>31</td>
+                        <td>31</td>
+                        <td>607</td>
+                        <td>610</td>
+                        <td>3</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/46.jpg" alt="46" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=46'"></td>
+                        <td>247</td>
+                        <td>269</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td>24</td>
+                        <td>26</td>
+                        <td>2</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/58.jpg" alt="58" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=58'"></td>
+                        <td>10322</td>
+                        <td>10377</td>
+                        <td>55</td>
+                        <td>49</td>
+                        <td>36852</td>
+                        <td>36872</td>
+                        <td>20</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/52.jpg" alt="52" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=52'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/54.jpg" alt="54" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=54'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>7</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/55.jpg" alt="55" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=55'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>7</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/56.jpg" alt="56" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=56'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>9</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/48.jpg" alt="48" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=48'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/57.jpg" alt="57" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=57'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>12</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/47.jpg" alt="47" onerror="this.src='https://via.placeholder.com/150/2ecc71/ffffff?text=47'"></td>
+                        <td>16470</td>
+                        <td>16487</td>
+                        <td>17</td>
+                        <td>17</td>
+                        <td>302899</td>
+                        <td>303021</td>
+                        <td>122</td>
+                        <td>-</td>
+                    </tr>
                     <tr class="total-row">
                         <td>Totales</td>
                         <td></td>
@@ -618,7 +846,7 @@
     <!-- Sección Villa Elisa -->
     <section id="elisa" class="section">
         <h2 class="section-title">Villa Elisa</h2>
-        <div class="table-container">
+        <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
@@ -635,7 +863,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="https://via.placeholder.com/150/9b59b6/ffffff?text=22" alt="22"></td>
+                        <td><img src="imagenes/22.jpg" alt="22" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=22'"></td>
                         <td>99285</td>
                         <td>99317</td>
                         <td>32</td>
@@ -645,7 +873,215 @@
                         <td>280</td>
                         <td>-</td>
                     </tr>
-                    <!-- ... resto de filas de Villa Elisa ... -->
+                    <tr>
+                        <td><img src="imagenes/23.jpg" alt="23" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=23'"></td>
+                        <td>31000</td>
+                        <td>31020</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>1897</td>
+                        <td>2070</td>
+                        <td>173</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/24.jpg" alt="24" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=24'"></td>
+                        <td>63430</td>
+                        <td>63462</td>
+                        <td>32</td>
+                        <td>31</td>
+                        <td>240191</td>
+                        <td>240297</td>
+                        <td>106</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/33.jpg" alt="33" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=33'"></td>
+                        <td>16695</td>
+                        <td>16715</td>
+                        <td>20</td>
+                        <td>13</td>
+                        <td>2901</td>
+                        <td>3075</td>
+                        <td>174</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/25.jpg" alt="25" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=25'"></td>
+                        <td>95366</td>
+                        <td>95395</td>
+                        <td>29</td>
+                        <td>27</td>
+                        <td>961739</td>
+                        <td>961939</td>
+                        <td>200</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/32.jpg" alt="32" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=32'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>11</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/26.jpg" alt="26" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=26'"></td>
+                        <td>13612</td>
+                        <td>13612</td>
+                        <td>0</td>
+                        <td>19</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/27.jpg" alt="27" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=27'"></td>
+                        <td>70427</td>
+                        <td>70446</td>
+                        <td>19</td>
+                        <td>19</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/34.jpg" alt="34" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=34'"></td>
+                        <td>5978</td>
+                        <td>5985</td>
+                        <td>7</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/15.jpg" alt="15" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=15'"></td>
+                        <td>5856</td>
+                        <td>5871</td>
+                        <td>15</td>
+                        <td>5</td>
+                        <td>719</td>
+                        <td>721</td>
+                        <td>2</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/16.jpg" alt="16" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=16'"></td>
+                        <td>10173</td>
+                        <td>10174</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1353</td>
+                        <td>1353</td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/19.jpg" alt="19" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=19'"></td>
+                        <td>391</td>
+                        <td>408</td>
+                        <td>17</td>
+                        <td>6</td>
+                        <td>38</td>
+                        <td>40</td>
+                        <td>2</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/21.jpg" alt="21" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=21'"></td>
+                        <td>247</td>
+                        <td>282</td>
+                        <td>35</td>
+                        <td>35</td>
+                        <td>19</td>
+                        <td>21</td>
+                        <td>2</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/17.jpg" alt="17" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=17'"></td>
+                        <td>5614</td>
+                        <td>5663</td>
+                        <td>49</td>
+                        <td>20</td>
+                        <td>781</td>
+                        <td>795</td>
+                        <td>14</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/30.jpg" alt="30" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=30'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>13</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/31.jpg" alt="31" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=31'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>6</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/29.jpg" alt="29" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=29'"></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>9</td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/18.jpg" alt="18" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=18'"></td>
+                        <td>15865</td>
+                        <td>15924</td>
+                        <td>59</td>
+                        <td>59</td>
+                        <td>2089</td>
+                        <td>2092</td>
+                        <td>3</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/20.jpg" alt="20" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=20'"></td>
+                        <td>10864</td>
+                        <td>10883</td>
+                        <td>19</td>
+                        <td>19</td>
+                        <td>5976</td>
+                        <td>5978</td>
+                        <td>2</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/28.jpg" alt="28" onerror="this.src='https://via.placeholder.com/150/9b59b6/ffffff?text=28'"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>0</td>
+                        <td>-</td>
+                    </tr>
                     <tr class="total-row">
                         <td>Totales</td>
                         <td></td>
